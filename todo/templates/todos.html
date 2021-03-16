@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Todos{% endblock %}</h1>
+
+{% endblock %}
+
+{% block content %}
+<h1>Here are some jobs to be done</h1>
+<ul>
+  {% for todo in todos %}
+    <li class="todo">{{ todo['description']}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
